@@ -1,4 +1,4 @@
-from web.App import app
+from main import app
 
 @app.get("/index")
 async def fastApi():
