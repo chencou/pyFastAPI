@@ -1,6 +1,5 @@
-from web.App import app
-
-
+from fastapi import FastAPI 
+app = FastAPI()
 if __name__ == "__main__" : 
     app
 
