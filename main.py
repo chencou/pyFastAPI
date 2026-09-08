@@ -1,5 +1,6 @@
-from fastapi import FastAPI 
+from fastapi import FastAPI
+from webui import web_router 
 app = FastAPI()
-if __name__ == "__main__" : 
-    app
+
+app.include_router(web_router)
 
