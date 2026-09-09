@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from models import UserIn, UserOut, getPasswordHash, verifyPassword
+from schemas import UserIn, UserOut, getPasswordHash, verifyPassword
 from util import create_access_token
 from datetime import date, datetime, timedelta
 
