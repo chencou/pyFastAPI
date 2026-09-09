@@ -1,6 +1,7 @@
 from fastapi import FastAPI
-from webui import web_router 
+from webui import web_router, user_auth_router 
 app = FastAPI()
 
 app.include_router(web_router)
+app.include_router(user_auth_router)
 

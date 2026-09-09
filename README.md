@@ -47,6 +47,6 @@ from main import app
 
 然后 `fastapi dev` 命令传入 `--entrypoint` 选项：
 ```
-uv uf fastapi dev --entrypoint main:app
+uv run fastapi dev --entrypoint main:app
 ```
 
