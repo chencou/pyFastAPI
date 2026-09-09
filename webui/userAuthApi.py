@@ -12,19 +12,22 @@ router = APIRouter(
 
 @router.post("/get")
 async def getUser(userIn: UserIn):
-    user = UserOut(userName=userIn.userName, 
-                      email=userIn.email, 
-                      sex=userIn.sex, 
-                      password=getPasswordHash(userIn.password), 
-                      create_time=datetime.now()) 
-
+    user = UserOut(
+        userName=userIn.userName, 
+        email=userIn.email, 
+        sex=userIn.sex, 
+        password=getPasswordHash(userIn.password), 
+        create_time=datetime.now()
+    )
     return user
 
 @router.post("/sign")
 async def signUser(userIn: UserIn):
-    userOut = UserOut(userName=userIn.userName, 
-                      email=userIn.email, 
-                      sex=userIn.sex, 
-                      password=getPasswordHash(userIn.password), 
-                      create_time=datetime.now())    
+    userOut = UserOut(
+        userName=userIn.userName, 
+        email=userIn.email, 
+        sex=userIn.sex, 
+        password=getPasswordHash(userIn.password), 
+        create_time=datetime.now()
+    ) 
     return create_access_token({"userName":userOut.userName, "email":userOut.email}, timedelta(60))
