@@ -1,6 +1,10 @@
+## idea
+.idea
+
 ## visual code
 .vs
-.venv
 
 ## python
 __pycache__
+.pyc
+.venv
