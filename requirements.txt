@@ -1,3 +1,2 @@
 pwdlib
 pyjwt
-fastapi 

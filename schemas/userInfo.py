@@ -1,6 +1,9 @@
+from typing import Literal
 from pydantic import BaseModel, EmailStr, Field
 from pwdlib import PasswordHash
 from datetime import date, datetime
+
+
 
 password_hash = PasswordHash.recommended()
 class UserIn(BaseModel):
@@ -17,12 +20,10 @@ class UserIn(BaseModel):
         title="邮箱",
         examples=["saned@163.com"]
     )
-    sex: int = Field(
+    sex: Literal[0, 1] = Field(
         alias="sex",
         title="性别 0：女，1:男",
         examples=[0],
-        ge=0,
-        le=1,
         default=0
     )
     password: str = Field(
