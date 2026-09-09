@@ -17,7 +17,7 @@ def check_validate(data):
 
 
 @router.get("/get")
-async def getUser(userName: Annotated[str, Query(min_length=1, description="用户名称",example="张三")]):
+async def getUser(userName: Annotated[str, Query(min_length=1, description="用户名称",examples=["张三"])]):
     return UserOut(
         userName=userName,
         email="chen@outlook.com",

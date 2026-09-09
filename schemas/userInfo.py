@@ -1,9 +1,14 @@
+from enum import Enum
 from typing import Literal
 from pydantic import BaseModel, EmailStr, Field
 from pwdlib import PasswordHash
 from datetime import date, datetime
 
-
+class UserSexEnum(int, Enum):
+    man = 1
+    woman = 0
+    def values():
+        return [e.value for e in UserSexEnum]
 
 password_hash = PasswordHash.recommended()
 class UserIn(BaseModel):
