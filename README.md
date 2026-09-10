@@ -18,7 +18,6 @@ project/
 └── main.py        # FastAPI 路由
 ```
 
-
 ### 项目启动
 创建 `main.py` 文件代码如下示例：
 ```python
@@ -43,7 +42,6 @@ entrypoint = "main:app"
 ```python
 from main import app
 ```
-
 
 然后 `fastapi dev` 命令传入 `--entrypoint` 选项：
 ```
