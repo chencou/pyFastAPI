@@ -1,2 +1,8 @@
 pwdlib
 pyjwt
+pytest
+pytest-asyncio
+httpx
+sqlmodel
+pymysql
+pydantic
