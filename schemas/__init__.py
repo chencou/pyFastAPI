@@ -4,3 +4,4 @@ from .userInfo import get_password_hash as getPasswordHash
 from .userInfo import verify_password as verifyPassword
 
 from .commonResult import ErrorCode as ErrorCode
+from .commonResult import CommonResult as CommonResult
