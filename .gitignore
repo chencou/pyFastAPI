@@ -3,6 +3,7 @@
 
 ## visual code
 .vs
+.vscode
 
 ## python
 __pycache__
